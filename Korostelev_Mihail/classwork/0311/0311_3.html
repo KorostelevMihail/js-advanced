@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="text" name="name">
+    </form>
+    <button id="myButt">
+            Click me 1
+        </button>
+    <script>
+    var button2 = document.querySelector("#myButt")
+    button2.addEventListener("click", myEvHand1,true);
+    document.body.addEventListener("click",myEvHand2,true)
+    function myEvHand1(e){
+        console.log('Button');
+        e.stopPropagation();
+    }
+    function myEvHand2(e){
+        console.log('Body');
+        e.stopPropagation();
+    }
+    </script>
+</body>
+</html>

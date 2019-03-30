@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="text" name="name" id="">
+        <input type="submit">
+    </form>
+        <button onclick="myEventHandler1()">Click me</button><!--можно в онлайн сразу написать js-->
+    <script>
+    function myEventHandler1(){
+        console.log("Hi world");
+    }
+    </script>
+    <!-- 2 вариант  -->
+     <form action="" method="get">
+            <input type="text" name="name" id="">
+            <input type="submit">
+        </form>
+            <button id="myBut">Click me 2</button>
+        <script>
+            let button = document.querySelector('#myBut');
+            button.onclick = myEventHandler;//если фунцию со скобками undefined
+        function myEventHandler(){
+            console.log("Hi itea2");
+        }
+        </script>
+    <!-- Event -->
+    <form action="" method="get">
+            <input type="text" name="name" id="">
+        </form>
+            <button onclick="myEventHandler(event)">Click me Event</button>
+        <script>
+        function myEventHandler(a){
+            console.log(a.target);
+        }
+        </script>
+</body>
+</html>

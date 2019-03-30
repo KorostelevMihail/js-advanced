@@ -1,0 +1,37 @@
+<div id="menu">
+  <button data-action="save">Сохранить</button>
+  <button data-action="load">Загрузить</button>
+  <button data-action="search">Поиск</button>
+</div>
+
+<script>
+  function Menu(elem) {
+    this.save = function() {
+      console.log( 'сохраняю' );
+    };
+    this.load = function() {
+      console.log( 'загружаю' );
+    };
+    this.search = function() {
+      console.log( 'ищу' );
+    };
+
+    var self = this;
+
+    elem.onclick = function(e) {
+      // get action from target and run it
+      var a = e.target;
+      var b = a.getAttribute('data-action')
+      var c = self[b]();
+      if(a.tagName.toLowerCase() === 'button')//или if (a.hasAttribute('button')){console.log(c);}
+      console.log(c);// или self[e.target.getAttribute('data-action')]()
+    };
+  }
+  document.body.onload = addBBB;
+function addBBB(){
+  var newDiv = document.createElement(div);
+  newDiv.innerHTML = c;
+  document.body.insertBefore(newDiv);
+}
+  new Menu(menu);
+</script>
